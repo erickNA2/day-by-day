@@ -3,50 +3,109 @@
     width: 100%;
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background: url('../assets/img1.jpg') center center no-repeat;
-}
-
-.hero .filter {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
-    z-index: 10;
+    justify-content: flex-end;
 }
 
 .hero .container {
     position: relative;
-    width: 50%;
+    width: 60%;
     height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+.hero .container .text {
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 20;
+    justify-content: space-evenly;
+    align-items: flex-end;
+
 }
 
-.hero .container p {
-    color: white;
+.hero .container .text h1 {
+    color: black;
+    font-size: 38px;
+    text-align: left;
+    font-weight: 400;
+    font-family: 'Lora', serif;
+}
+
+.hero .container .text p {
+    color: black;
     font-size: 18px;
     text-align: left;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    width: 288px;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
 }
 
-.hero .container .btn {
-    position: relative;
-    background: white;
-    width: 68px;
-    height: 28px;
-    border-top-right-radius: 8px;
+
+.hero .container .text .btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: none;
     border: none;
+    box-shadow: none;
+    width: auto;
+    height: auto;
     color: black;
-    font-size: 12px;
-    text-align: center;
-    text-transform: lowercase;
-    margin-top: 20px;
+    font-size: 14px;
+    text-align: left;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    transition: all .2s ease-in-out;
+}
+
+.hero .container .text .btn:hover {
+    cursor: pointer;
+}
+
+.hero .container .text .btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 1px;
+    background: black;
+    transition: all .2s ease-in-out;
+}
+
+.hero .container .text .btn:hover::before {
+    width: 100%;
+}
+
+.hero .container .box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+}
+
+.hero .container .box .void {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px rgba(0, 0, 0, 0.2) solid;
+}
+
+.hero .container .box .void .ill1 {
+    position: relative;
+    width: 122px;
+    height: 122px;
+    background: black;
+}
+
+.hero .container .box .void .ill2 {
+    position: relative;
+    width: 122px;
+    height: 122px;
+    border-radius: 50%;
+    background: black;
 }
