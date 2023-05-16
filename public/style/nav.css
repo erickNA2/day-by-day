@@ -1,0 +1,171 @@
+.mainMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    background: white;
+    margin-top: 48px;
+    transform: scaleY(0);
+    opacity: 0;
+    transform-origin: top;
+    transition: all .3s ease-in-out;
+    z-index: 99;
+
+}
+
+.mainMenu.active {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.mainMenu .gridContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.mainMenu .gridContainer .box {
+    position: relative;
+    transition: all .4s ease-in-out;
+}
+
+.mainMenu .gridContainer .box:hover {
+    background: black;
+}
+
+.mainMenu .gridContainer .box:hover h1 {
+    color: white;
+}
+
+.mainMenu .gridContainer .box a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.mainMenu .gridContainer .box a h1 {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Lora', serif;
+    transition: all .4s ease-in-out;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 48px;
+    background: white;
+    padding: 0 40px;
+    z-index: 99;
+}
+
+.nav .logo {
+    position: relative;
+    width:  128px;
+    height: auto;
+    color: black;
+    font-size: 16px;
+    font: italic;
+    text-align: left;
+    font-weight: 400;
+    font-family: 'Lora', serif;
+}
+
+.nav .menu {
+    position: relative;
+    width: 98px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav .menu:hover {
+    cursor: pointer;
+}
+
+.nav .menu p {
+    color: black;
+    font-size: 12px;
+    text-transform: lowercase;
+    text-align: center;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+}
+
+.nav .menu .icon {
+    position: relative;
+    width: 20%;
+    height: 60%;
+}
+
+.nav .menu .icon::before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.nav .menu .icon::after {
+    content: '';
+    position: absolute;
+    top: 80%;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.nav .register {
+    position: relative;
+    width: 188px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav .register ul {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav .register ul li {
+    position: relative;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.nav .register ul li a {
+    color: black;
+    font-size: 12px;
+    text-transform: lowercase;
+    text-align: center;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+}
