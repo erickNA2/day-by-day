@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="main">
+        <div class="register">
+            <div class="title">
+                <h1>Cadastre-se</h1>
+            </div>
+            <div class="container">
+                <div class="box borderRight">
+                    <div class="row borderBot">
+                        <div class="label"><p>Nome:</p></div>
+                        <input type="text" id="ipt_nome" class="inputText">
+                    </div>
+                    <div class="row borderBot">
+                        <div class="label"><p>Sobre Nome:</p></div>
+                        <input type="text" id="ipt_sobre" class="inputText">
+                    </div>
+                    <div class="row">
+                        <div class="label"><p>Data de Nacimento:</p></div>
+                        <input type="text" id="ipt_nasc" class="inputText">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="row borderBot">
+                        <div class="label"><p>Experiencia com idiomas:</p></div>
+                        <div class="chkContainer">
+                            <div class="item">
+                                <input type="checkbox" id="ipt_low" name="low" value="low">
+                                <label for="low">Nenhuma</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox" id="ipt_mid" name="mid" value="mid">
+                                <label for="mid">Já estudei</label>
+                            </div>
+                            <div class="item">
+                                <input type="checkbox" id="ipt_high" name="high" value="high">
+                                <label for="high">Falo outro</label>
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="row borderBot">
+                        <div class="label"><p>Email:</p></div>
+                        <input type="text" id="ipt_email" class="inputText">
+                    </div>
+                    <div class="row">
+                        <div class="label"><p>Estado de residencia:</p></div>
+                        <input type="text" id="ipt_estado" class="inputText">
+                    </div>
+                </div>
+
+                <div class="submitBox borderTop">
+                    <button onclick="cadastrar()">cadastrar-se</button>
+                    <a href="">Já pussuo uma conta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
