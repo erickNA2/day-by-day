@@ -1,0 +1,192 @@
+@import url('../style/global.css');
+@import url('../style/nav.css');
+
+.register {
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.register .title {
+    position: relative;
+    width: 100%;
+    height: auto;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Lora', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.register .container {
+    position: relative;
+    width: 60%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 16px;
+}
+
+.register .container .box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.register .container .box .row {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.register .container .box .row select {
+    position: relative;
+    width: 188px;
+    height: 28px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 12px;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    border-top-right-radius: 8px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    padding-left: 10px;
+}
+
+.register .container .box .row .chkContainer {
+    position: relative;
+    width: 188px;
+    height: 38px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.register .container .box .row .chkContainer .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 11px;
+    text-align: center;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+}
+
+.register .container .box .row .chkContainer .item label {
+    margin-top: 6px;
+}
+
+.register .container .box .row .label {
+    position: relative;
+    width: 188px;
+    height: auto;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 12px;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+}
+
+.register .container .box .row .inputText {
+    position: relative;
+    width: 188px;
+    height: 28px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 12px;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    border-top-right-radius: 8px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    padding-left: 10px;
+}
+
+.register .container .submitBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: span 2; 
+}
+
+.register .container .submitBox button {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 162px;
+    height: 28px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    padding-left: 10px;
+    background: white;
+    transition: all .2s ease-in-out;
+}
+
+.register .container .submitBox button:hover {
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    color: black;
+}
+
+.register .container .submitBox a {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 10px;
+    text-transform: lowercase;
+    text-align: center;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+
+.register .container .submitBox a:hover {
+    color: black;
+}
+
+.register .container .submitBox a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: all .2s ease-in-out;
+}
+
+.register .container .submitBox a:hover::after {
+    width: 100%;
+    background-color: black;
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day By Day - Register</title>
+    <link rel="stylesheet" href="register.css" />
+    <script src="../js/funcoes.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="mainMenu" id="menu">
+        <div class="gridContainer borderBot">
+          <div class="box borderBot borderRight">
+            <a href="../index.html">
+              <h1>inicio</h1>
+            </a>
+          </div>
+          <div class="box borderBot borderRight">
+            <a href="">
+              <h1>cursos</h1>
+            </a>
+          </div>
+          <div class="box borderBot">
+            <a href="">
+              <h1>estatisticas</h1>
+            </a>
+          </div>
+          <div class="box borderRight">
+            <a href="">
+              <h1>sobre</h1>
+            </a>
+          </div>
+          <div class="box borderRight">
+            <a href="">
+              <h1>futuro</h1>
+            </a>
+          </div>
+          <div class="box">
+            <a href="">
+              <h1>perfil</h1>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav borderBot">
+        <div class="logo">Day by Day</div>
+        <div class="menu" onclick="toggle()">
+          <div class="icon"></div>
+          <p>menu</p>
+        </div>
+        <div class="register">
+          <ul>
+            <li class="borderRight"><a href="./login.html">login</a></li>
+            <li><a href="./register.css">register</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="register">
+        <div class="title">
+          <h1>Cadastre-se</h1>
+        </div>
+        <div class="container">
+          <div class="box borderRight">
+            <div class="row borderBot">
+              <div class="label"><p>Nome:</p></div>
+              <input type="text" id="ipt_nome" class="inputText" />
+            </div>
+
+            <div class="row borderBot">
+              <div class="label"><p>Email:</p></div>
+              <input type="text" id="ipt_email" class="inputText" />
+            </div>
+
+            <div class="row borderBot">
+              <div class="label"><p>Senha:</p></div>
+              <input type="text" id="ipt_senha" class="inputText" />
+            </div>
+
+            <div class="row">
+              <div class="label"><p>Experiencia com idiomas:</p></div>
+              <select id="ipt_idioma">
+                <option value="">Selecione</option>
+                <option value="none">Nenhuma</option>
+                <option value="low">Baixa</option>
+                <option value="mid">Intermediaria</option>
+                <option value="high">Alta</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="row borderBot">
+              <div class="label"><p>Sobre Nome:</p></div>
+              <input type="text" id="ipt_sobre" class="inputText" />
+            </div>
+
+            <div class="row borderBot">
+              <div class="label"><p>Ano de Nacimento:</p></div>
+              <input type="text" id="ipt_ano" class="inputText" />
+            </div>
+
+            <div class="row borderBot">
+              <div class="label"><p>Confirmar senha:</p></div>
+              <input type="text" id="ipt_cnfSenha" class="inputText" />
+            </div>
+
+            <div class="row">
+              <div class="label"><p>Estado de residencia:</p></div>
+              <select id="ipt_estado">
+                <option value="">Selecione</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espirito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="submitBox borderTop">
+            <button onclick="cadastrar()">cadastrar-se</button>
+            <a href="./login.html">Já pussuo uma conta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  let hbMenu = document.getElementById("menu");
+
+  function toggle() {
+    hbMenu.classList.toggle("active");
+  }
+
+  function cadastrar() {
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = ipt_nome.value;
+    var sobreVar = ipt_sobre.value;
+    var emailVar = ipt_email.value;
+    var anoVar = Number(ipt_ano.value);
+    var estadoVar = ipt_estado.value;
+    var idiomaVar = ipt_idioma.value;
+    var senhaVar = ipt_senha.value;
+    var confirmacaoSenhaVar = ipt_cnfSenha.value;
+
+    if (
+      nomeVar == "" ||
+      emailVar == "" ||
+      senhaVar == "" ||
+      confirmacaoSenhaVar == ""
+    ) {
+      return false;
+    }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        sobreServer: sobreVar,
+        estadoServer: estadoVar,
+        idiomaServer: idiomaVar,
+        anoServer: anoVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cardErro.style.display = "block";
+
+          mensagem_erro.innerHTML =
+            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+          setTimeout(() => {
+            window.location = "login.html";
+          }, "2000");
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+
+    return false;
+  }
+</script>
