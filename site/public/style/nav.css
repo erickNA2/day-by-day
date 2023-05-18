@@ -79,6 +79,10 @@
     position: relative;
     width:  128px;
     height: auto;
+
+}
+
+.nav .logo a {
     color: black;
     font-size: 16px;
     font: italic;

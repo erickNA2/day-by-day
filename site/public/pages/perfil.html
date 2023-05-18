@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./perfil.css" />
+  </head>
+  <body>
+    <div class="mainMenu" id="menu">
+      <div class="gridContainer borderBot">
+        <div class="box borderBot borderRight">
+          <a href="../index.html">
+            <h1>inicio</h1>
+          </a>
+        </div>
+        <div class="box borderBot borderRight">
+          <a href="">
+            <h1>cursos</h1>
+          </a>
+        </div>
+        <div class="box borderBot">
+          <a href="">
+            <h1>estatisticas</h1>
+          </a>
+        </div>
+        <div class="box borderRight">
+          <a href="">
+            <h1>sobre</h1>
+          </a>
+        </div>
+        <div class="box borderRight">
+          <a href="">
+            <h1>futuro</h1>
+          </a>
+        </div>
+        <div class="box">
+          <a href="">
+            <h1>perfil</h1>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="nav borderBot">
+      <div class="logo"><a href="../index.html">Day by Day</a></div>
+      <div class="menu" onclick="toggle()">
+        <div class="icon"></div>
+        <p>menu</p>
+      </div>
+      <div class="register">
+        <ul>
+          <li class="borderRight"><a href="./login.html">login</a></li>
+          <li><a href="./register.html">register</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="profile">
+        <div class="container">
+            <div class="userInfo borderRight">
+              <div class="pic">
+
+              </div>
+              <div class="text">
+                Lorem, ipsum.
+              </div>
+              <div class="text">
+                Lorem, ipsum.
+              </div>
+              <div class="text">
+                Lorem, ipsum.
+              </div>
+              <div class="text">
+                Lorem, ipsum.
+              </div>
+              <div class="text">
+                Lorem, ipsum.
+              </div>
+            </div>
+
+            <div class="progressInfo">
+                
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  let hbMenu = document.getElementById("menu");
+
+  function toggle() {
+    hbMenu.classList.toggle("active");
+  }
+</script>

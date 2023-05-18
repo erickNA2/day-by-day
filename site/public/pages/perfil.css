@@ -1,0 +1,49 @@
+@import url('../style/nav.css');
+@import url('../style/global.css');
+
+.profile {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.profile .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+}
+
+.profile .container .userInfo {
+    position: relative;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile .container .userInfo .pic {
+    position: relative;
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    background: crimson;
+}
+
+.profile .container .userInfo .text {
+    position: relative;
+    width: 148px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.9);
+    text-transform: lowercase;
+    font-size: 12px;
+    text-align: left;
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+}

@@ -1,88 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day By Day - Login</title>
-    <link rel="stylesheet" href="./login.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+  <body>
     <div class="main">
-        <div class="mainMenu" id="menu">
-            <div class="gridContainer borderBot">
-                <div class="box borderBot borderRight">
-                    <a href="../index.html">
-                        <h1>inicio</h1>
-                    </a>
-                </div>
-                <div class="box borderBot borderRight">
-                    <a href="">
-                        <h1>cursos</h1>
-                    </a>
-                </div>
-                <div class="box borderBot ">
-                    <a href="">
-                        <h1>estatisticas</h1>
-                    </a>
-                </div>
-                <div class="box borderRight">
-                    <a href="">
-                        <h1>sobre</h1>
-                    </a>
-                </div>
-                <div class="box borderRight">
-                    <a href="">
-                        <h1>futuro</h1>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="">
-                        <h1>perfil</h1>
-                    </a>
-                </div>
-            </div>
+      <div class="mainMenu" id="menu">
+        <div class="gridContainer borderBot">
+          <div class="box borderBot borderRight">
+            <a href="../index.html">
+              <h1>inicio</h1>
+            </a>
+          </div>
+          <div class="box borderBot borderRight">
+            <a href="">
+              <h1>cursos</h1>
+            </a>
+          </div>
+          <div class="box borderBot">
+            <a href="">
+              <h1>estatisticas</h1>
+            </a>
+          </div>
+          <div class="box borderRight">
+            <a href="">
+              <h1>sobre</h1>
+            </a>
+          </div>
+          <div class="box borderRight">
+            <a href="">
+              <h1>futuro</h1>
+            </a>
+          </div>
+          <div class="box">
+            <a href="./perfil.html">
+              <h1>perfil</h1>
+            </a>
+          </div>
         </div>
-        <div class="nav borderBot">
-            <div class="logo">
-                Day by Day
-            </div>
-            <div class="menu" onclick="toggle()" >
-                    <div class="icon"></div>
-                    <p>menu</p>
-                
-            </div>
-            <div class="register">
-                <ul>
-                    <li class="borderRight"><a href="./login.html">login</a></li>
-                    <li><a href="./register.html">register</a></li>
-                </ul>
-            </div>
+      </div>
+      <div class="nav borderBot">
+        <div class="logo">
+          <a href="../index.html">Day by Day</a>
         </div>
+        <div class="menu" onclick="toggle()">
+          <div class="icon"></div>
+          <p>menu</p>
+        </div>
+        <div class="register">
+          <ul>
+            <li class="borderRight"><a href="./login.html">login</a></li>
+            <li><a href="./register.html">register</a></li>
+          </ul>
+        </div>
+      </div>
 
-        <div class="login">
-            <div class="container">
-                <div class="box">
-                    <div class="label"><p>Email:</p></div>
-                    <input type="text" id="ipt_email" class="inputText">
-                </div>
-                <div class="box">
-                    <div class="label"><p>Senha:</p></div>
-                    <input type="text" id="ipt_senha" class="inputText">
-                </div>
-                <div class="submitBox">
-
-                </div>
-            </div>
+      <div class="login">
+        <div class="container borderBot">
+          <div class="box borderBot">
+            <div class="label"><p>Email:</p></div>
+            <input type="text" id="email_input" class="inputText" />
+          </div>
+          <div class="box">
+            <div class="label"><p>Senha:</p></div>
+            <input type="text" id="senha_input" class="inputText" />
+          </div>
         </div>
+        <div class="submitBox">
+          <button onclick="entrar()">entrar</button>
+          <a href="./login.html">Esqueci minha Senha</a>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
 
 <script>
-    let hbMenu = document.getElementById('menu')
+  let hbMenu = document.getElementById("menu");
 
-    function toggle() {
-        hbMenu.classList.toggle('active')
+  function toggle() {
+    hbMenu.classList.toggle("active");
+  }
+
+  function entrar() {
+    var emailVar = email_input.value;
+    var senhaVar = senha_input.value;
+
+    if (emailVar == "" || senhaVar == "") {
+      return false;
     }
+
+    console.log("FORM LOGIN: ", emailVar);
+    console.log("FORM SENHA: ", senhaVar);
+
+    fetch("/usuarios/autenticar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!");
+
+        if (resposta.ok) {
+          console.log(resposta);
+
+          resposta.json().then((json) => {
+            console.log(json);
+            console.log(JSON.stringify(json));
+
+            sessionStorage.EMAIL_USUARIO = json.email;
+            sessionStorage.NOME_USUARIO = json.nome;
+            sessionStorage.ID_USUARIO = json.id;
+
+            setTimeout(() => {
+              window.location = "/pages/perfil.html";
+            }, "2000"); // apenas para exibir o loading
+          });
+        } else {
+          console.log("Houve um erro ao tentar realizar o login!");
+
+          resposta.text().then((texto) => {
+            console.error(texto);
+            finalizarAguardar(texto);
+          });
+        }
+      })
+      .catch(function (erro) {
+        console.log(erro);
+      });
+
+    return false;
+  }
 </script>

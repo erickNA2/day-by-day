@@ -38,14 +38,16 @@
             </a>
           </div>
           <div class="box">
-            <a href="">
+            <a href="./perfil.html">
               <h1>perfil</h1>
             </a>
           </div>
         </div>
       </div>
       <div class="nav borderBot">
-        <div class="logo">Day by Day</div>
+        <div class="logo">
+          <a href="../index.html">Day by Day</a>
+        </div>
         <div class="menu" onclick="toggle()">
           <div class="icon"></div>
           <p>menu</p>
@@ -59,9 +61,6 @@
       </div>
 
       <div class="register">
-        <div class="title">
-          <h1>Cadastre-se</h1>
-        </div>
         <div class="container">
           <div class="box borderRight">
             <div class="row borderBot">
@@ -76,7 +75,7 @@
 
             <div class="row borderBot">
               <div class="label"><p>Senha:</p></div>
-              <input type="text" id="ipt_senha" class="inputText" />
+              <input type="password" id="ipt_senha" class="inputText" />
             </div>
 
             <div class="row">
@@ -104,7 +103,7 @@
 
             <div class="row borderBot">
               <div class="label"><p>Confirmar senha:</p></div>
-              <input type="text" id="ipt_cnfSenha" class="inputText" />
+              <input type="password" id="ipt_cnfSenha" class="inputText" />
             </div>
 
             <div class="row">
@@ -202,13 +201,8 @@
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-          cardErro.style.display = "block";
-
-          mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
           setTimeout(() => {
-            window.location = "login.html";
+            window.location = "/pages/login.html";
           }, "2000");
         } else {
           throw "Houve um erro ao tentar realizar o cadastro!";

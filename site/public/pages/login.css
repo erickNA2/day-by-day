@@ -2,3 +2,137 @@
 @import url('../style/nav.css');
 
 
+.main  {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    position: relative;
+    width: 28%;
+    height: 68%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 16px;
+}
+
+.login .container {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.login .container .box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login .container .box .label {
+    position: relative;
+    width: 168px;
+    height: auto;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+}
+
+.login .container .box .inputText {
+    position: relative;
+    width: 168px;
+    height: 28px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 12px;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    border-top-right-radius: 8px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    padding-left: 10px;
+}
+
+.login .submitBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: span 2; 
+}
+
+.login .submitBox button {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    width: 162px;
+    height: 28px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    padding-left: 10px;
+    background: white;
+    transition: all .2s ease-in-out;
+}
+
+.login .submitBox button:hover {
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    color: black;
+}
+
+.login .submitBox a {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 10px;
+    text-transform: lowercase;
+    text-align: center;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+
+.login .submitBox a:hover {
+    color: black;
+}
+
+.login .container .submitBox a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: all .2s ease-in-out;
+}
+
+.login .container .submitBox a:hover::after {
+    width: 100%;
+    background-color: black;
+}
