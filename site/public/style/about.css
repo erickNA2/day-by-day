@@ -27,8 +27,8 @@
 
 .about .container .box .grid {
     position: relative;
-    width: 60%;
-    height: 60%;
+    width: 368px;
+    height: 368px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;

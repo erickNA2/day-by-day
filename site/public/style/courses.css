@@ -1,14 +1,42 @@
 .courses {
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+
+.courses .title {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.courses .title h1 {
+    color: black;
+    font-size: 28px;
+    text-align: left;
+    font-weight: 400;
+    font-family: 'Lora', serif;
+}
+
+.courses .container {
+    position: relative;
+    width: 100%;
+    height: 70%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.courses .box {
+.courses .container .box {
     position: relative;
     width: 28%;
     height: 98%;
@@ -19,9 +47,24 @@
     align-items: center;
     justify-content: space-evenly;
     border-radius: 20px;
+    transition: all .2s ease-in-out;
 }
 
-.courses .box h1 {
+.courses .container .box:hover {
+    background: black;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.courses .container .box:hover h1 {
+    color: white;
+}
+
+.courses .container .box:hover p {
+    color: white;
+}
+
+.courses .container .box h1 {
     color: black;
     font-size: 18px;
     text-align: left;
@@ -30,7 +73,7 @@
     font-family: 'Lora', serif;
 }
 
-.courses .box p {
+.courses .container .box p {
     position: relative;
     width: 80%;
     height: auto;
