@@ -48,22 +48,22 @@
     cursor: pointer;
 }
 
-.displayContainer.hidden {
-    height: 0;
-    opacity: 0;
+.displayContainer.show {
+    height: 388px;
+    opacity: 1;
 }
 
 .displayContainer {
     position: relative;
     width: 100%;
-    height: 388px;
+    height: 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     padding: 10px;
     transform-origin: top center;
-    opacity: 1;
-    transition: all .4s ease-in-out;
+    opacity: 0;
+    transition: all .4s ease-out;
     overflow: hidden;
 }
 
@@ -79,21 +79,70 @@
 
 .displayContainer .box .img {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 70%;
-    background: magenta;
+    background: rgba(200, 90, 33, .9);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.displayContainer .box .img:hover {
+    cursor: pointer;
+}
+
+.displayContainer .box .img .play {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-style: solid;
+    border-width: 27px 0px 27px 54px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.8);
+    z-index: 20;
 }
 
 .displayContainer .box .title {
     position: relative;
     width: 100%;
-    height: 20%;
-    background: greenyellow;
+    height: 10%;
 }
+
+.displayContainer .box .title h1 {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 28px;
+    text-transform: capitalize;
+    text-align: left;
+    font-family: 'Lora', serif;
+    font-weight: 300;
+}
+
+.displayContainer .box .desc {
+    position: relative;
+    width: 100%;
+    height: 15%;
+}
+
+.displayContainer .box .desc p {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 16px;
+    text-align: left;
+    font-family: 'Raleway', serif;
+    font-weight: 300;
+}
+
 
 .displayContainer .box .time {
     position: relative;
     width: 100%;
-    height: 10%;
-    background: orangered;
+    height: 5%;
+}
+
+.displayContainer .box .time span {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+    text-transform: capitalize;
+    text-align: left;
+    font-family: 'Raleway', serif;
+    font-weight: 400;
 }

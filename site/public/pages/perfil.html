@@ -74,8 +74,8 @@
               <div class="text">
                 Lorem, ipsum.
               </div>
-              <div class="text">
-                Lorem, ipsum.
+              <div class="text" onclick="logOut()">
+                Log-out
               </div>
             </div>
 
@@ -95,13 +95,30 @@
 
   let hbMenu = document.getElementById("menu");
 
-  window.onload = (e) => {
-    nome.innerHTML = nm + ' ' + sbrNm
+  window.onload = () => {
+    if(!sessionStorage.IS_LOGGED) {
+      window.location = '/pages/login.html'
+    } else {
+      nome.innerHTML = nm + ' ' + sbrNm
     email.innerHTML = mail
     ano.innerHTML = dt
+    }
+  
   }
 
   function toggle() {
     hbMenu.classList.toggle("active");
+  }
+
+  function logOut() {
+    sessionStorage.ANO_USUARIO = ''
+    sessionStorage.EMAIL_USUARIO = ''
+    sessionStorage.ID_USUARIO = ''
+    sessionStorage.NOME_USUARIO = ''
+    sessionStorage.SBRNOME_USUARIO = ''
+    sessionStorage.IS_LOGGED = false
+
+    alert('deslogado...')
+    window.location = '/pages/login.html'
   }
 </script>

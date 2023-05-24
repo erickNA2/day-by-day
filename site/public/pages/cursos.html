@@ -64,26 +64,53 @@
         <div class="text">
           <h1>Inglês</h1>
         </div>
-        <div class="arrow borderBot borderTop" onclick="hide()">🡃</div>
+        <div class="arrow borderBot borderTop" onclick="showEN()">🡃</div>
       </div>
 
-      <div class="displayContainer">
+      <div class="displayContainer" id="en">
         <div class="box">
-          <div class="img"></div>
-          <div class="title"></div>
-          <div class="time"></div>
+          <div class="img">
+              <div class="play"></div>
+          </div>
+          <div class="title">
+            <h1>Aula - 01</h1>
+          </div>
+          <div class="desc">
+            <p>Introdução a conceitos e estudo da fonética do Ingês</p>
+          </div>
+          <div class="time">
+            <span>00:00 - 01:40</span>
+          </div>
         </div>
 
         <div class="box">
-          <div class="img"></div>
-          <div class="title"></div>
-          <div class="time"></div>
+          <div class="img">
+              <div class="play"></div>
+          </div>
+          <div class="title">
+            <h1>Aula - 01</h1>
+          </div>
+          <div class="desc">
+            <p>Introdução a conceitos e estudo da fonética do Ingês</p>
+          </div>
+          <div class="time">
+            <span>00:00 - 01:40</span>
+          </div>
         </div>
 
         <div class="box">
-          <div class="img"></div>
-          <div class="title"></div>
-          <div class="time"></div>
+          <div class="img">
+              <div class="play"></div>
+          </div>
+          <div class="title">
+            <h1>Aula - 01</h1>
+          </div>
+          <div class="desc">
+            <p>Introdução a conceitos e estudo da fonética do Ingês</p>
+          </div>
+          <div class="time">
+            <span>00:00 - 01:40</span>
+          </div>
         </div>
       </div>
 
@@ -91,14 +118,53 @@
         <div class="text">
           <h1>Francês</h1>
         </div>
-        <div class="arrow borderBot borderTop"></div>
+        <div class="arrow borderBot borderTop" onclick="showFR()">🡃</div>
       </div>
 
-      <div class="displayContainer">
+      <div class="displayContainer" id="fr">
         <div class="box">
-          <div class="img"></div>
-          <div class="title"></div>
-          <div class="time"></div>
+          <div class="img">
+              <div class="play"></div>
+          </div>
+          <div class="title">
+            <h1>Aula - 01</h1>
+          </div>
+          <div class="desc">
+            <p>Introdução a conceitos e estudo da fonética do Ingês</p>
+          </div>
+          <div class="time">
+            <span>00:00 - 01:40</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="img">
+              <div class="play"></div>
+          </div>
+          <div class="title">
+            <h1>Aula - 01</h1>
+          </div>
+          <div class="desc">
+            <p>Introdução a conceitos e estudo da fonética do Ingês</p>
+          </div>
+          <div class="time">
+            <span>00:00 - 01:40</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="img">
+              <div class="play"></div>
+          </div>
+          <div class="title">
+            <h1>Aula - 01</h1>
+          </div>
+          <div class="desc">
+            <p>Introdução a conceitos e estudo da fonética do Ingês</p>
+          </div>
+          <div class="time">
+            <span>00:00 - 01:40</span>
+          </div>
         </div>
       </div>
 
@@ -106,14 +172,53 @@
         <div class="text">
           <h1>Espanhol</h1>
         </div>
-        <div class="arrow borderBot borderTop"></div>
+        <div class="arrow borderBot borderTop" onclick="showES()">🡃</div>
       </div>
 
-      <div class="displayContainer">
+      <div class="displayContainer" id="es">
         <div class="box">
-          <div class="img"></div>
-          <div class="title"></div>
-          <div class="time"></div>
+          <div class="img">
+              <div class="play"></div>
+          </div>
+          <div class="title">
+            <h1>Aula - 01</h1>
+          </div>
+          <div class="desc">
+            <p>Introdução a conceitos e estudo da fonética do Ingês</p>
+          </div>
+          <div class="time">
+            <span>00:00 - 01:40</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="img">
+              <div class="play"></div>
+          </div>
+          <div class="title">
+            <h1>Aula - 01</h1>
+          </div>
+          <div class="desc">
+            <p>Introdução a conceitos e estudo da fonética do Ingês</p>
+          </div>
+          <div class="time">
+            <span>00:00 - 01:40</span>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="img">
+              <div class="play"></div>
+          </div>
+          <div class="title">
+            <h1>Aula - 01</h1>
+          </div>
+          <div class="desc">
+            <p>Introdução a conceitos e estudo da fonética do Ingês</p>
+          </div>
+          <div class="time">
+            <span>00:00 - 01:40</span>
+          </div>
         </div>
       </div>
     </div>
@@ -122,10 +227,25 @@
 
 
 <script>
-  let list = document.querySelectorAll('.displayContainer')
-  function hide() {
-    for(let i = 0; i < list.length; i++) {
-      list[i].classList.toggle('hidden')
-    }
+  let videosEN = document.getElementById('en')
+  let videosFR = document.getElementById('fr')
+  let videosES = document.getElementById('es')
+
+  function showEN() {
+    
+    videosEN.classList.toggle('show')
+
+  }
+
+  function showFR() {
+
+    videosFR.classList.toggle('show')
+
+  }
+
+  function showES() {
+
+    videosES.classList.toggle('show')
+
   }
 </script>
