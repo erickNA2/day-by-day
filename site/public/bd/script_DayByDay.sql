@@ -12,6 +12,14 @@ CREATE TABLE usuario (
     idiomaExp VARCHAR(10)
 );
 
+CREATE TABLE votes (
+    idVoto INT PRIMARY KEY AUTO_INCREMENT,
+    escolha INT,
+    fkUsuario INT,
+    CONSTRAINT fkVotoUsuario FOREIGN KEY (fkUsuario)
+    REFERENCES usuario(idUsuario)
+);
+
 DROP TABLE usuario;
 
 SELECT * FROM usuario;
