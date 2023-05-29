@@ -12,7 +12,7 @@ var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
 var avisosRouter = require("./src/routes/avisos");
 var medidasRouter = require("./src/routes/medidas");
-var votesRouter = require("./src/router/votes");
+var votesRouter = require("./src/routes/votes");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
