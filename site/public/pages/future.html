@@ -5,27 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="future.css" />
   </head>
   <body>
     <div class="main">
+      <div class="mainMenu" id="menu">
+        <div class="gridContainer borderBot">
+          <div class="box borderBot borderRight">
+            <a href="../index.html">
+              <h1>inicio</h1>
+            </a>
+          </div>
+          <div class="box borderBot borderRight">
+            <a href="./pages/cursos.html">
+              <h1>cursos</h1>
+            </a>
+          </div>
+          <div class="box borderBot">
+            <a href="">
+              <h1>estatisticas</h1>
+            </a>
+          </div>
+          <div class="box borderRight">
+            <a href="">
+              <h1>sobre</h1>
+            </a>
+          </div>
+          <div class="box borderRight">
+            <a href="./pages/future.html">
+              <h1>futuro</h1>
+            </a>
+          </div>
+          <div class="box">
+            <a href="./pages/perfil.html">
+              <h1>perfil</h1>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav borderBot">
+        <div class="logo">
+          <a href="./index.html">Day by Day</a>
+        </div>
+        <div class="menu" onclick="toggle()">
+          <div class="icon"></div>
+          <p>menu</p>
+        </div>
+        <div class="register">
+          <ul>
+            <li class="borderRight"><a href="./pages/login.html">login</a></li>
+            <li><a href="./pages/register.html">register</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="selection">
-        <div class="title"></div>
-        <div class="text"></div>
-        <div class="container">
-          <div class="option">
-            <h1></h1>
+        <div class="title">
+          <h1>
+            Em quais outros idiomas você gostaria que desenvolvessemos nossas
+            ideias?
+          </h1>
+        </div>
+        <div class="text">
+          <p>
+            O idioma mais votado será o proximo a receber uma serie de cursos
+            para guiar seus estudos, com o segundo mais votado sendo o proximo e
+            assim sucessivamente.
+          </p>
+        </div>
+        <div class="container borderTop borderBot">
+          <div class="option" onclick="votar()">
+            <h1>Alemão</h1>
           </div>
-          <div class="option">
-            <h1></h1>
+
+          <div class="option" onclick="buscarVotos()">
+            <h1>Russo</h1>
           </div>
+
           <div class="option">
-            <h1></h1>
+            <h1>Mandarin</h1>
+          </div>
+
+          <div class="option">
+            <h1 id="result">Hindi</h1>
           </div>
         </div>
       </div>
 
       <div class="statistics">
-        <canvas id="myChart"></canvas>
+        <canvas id="myChart" class="chart"></canvas>
       </div>
     </div>
   </body>
@@ -36,14 +103,20 @@
 <script>
   const ctx = document.getElementById("myChart");
 
+  let hbMenu = document.getElementById("menu");
+
+  function toggle() {
+    hbMenu.classList.toggle("active");
+  }
+
   new Chart(ctx, {
     type: "bar",
     data: {
-      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+      labels: ["Alemão", "Russo", "Mandarin", "Hindi"],
       datasets: [
         {
-          label: "# of Votes",
-          data: [12, 19, 3, 5, 2, 3],
+          label: "Acompanhamento dos votos:",
+          data: [10, 19, 15, 5],
           borderWidth: 1,
         },
       ],
@@ -56,4 +129,44 @@
       },
     },
   });
+
+  function votar() {
+    var idVar = sessionStorage.ID_USUARIO;
+    var votoVar = 1;
+
+    fetch("/votes/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        idServer: idVar,
+        votoServer: votoVar,
+      }),
+    })
+      .then(function resposta(response) {
+        console.log("resposta: ", resposta);
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+
+    return false;
+  }
+
+  function buscarVotos() {
+    fetch("/votes/listar", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then(function resposta(response){
+      let text = response.text()
+
+      result.innerHTML = text
+      console.log(text)
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      })
+  }
 </script>

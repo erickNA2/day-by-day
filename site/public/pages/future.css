@@ -1,3 +1,103 @@
 @import url('../style/nav.css');
 @import url('../style/global.css');
 
+.selection {
+    position: relative;
+    width: 100%;
+    margin-top: 80px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+
+.selection .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.selection .title h1 {
+    width: 688px;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 32px;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-weight: 300;
+}
+
+.selection .text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.selection .text p {
+    width: 388px;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 14px;
+    text-align: left;
+    font-family: 'Raleway', serif;
+    font-weight: 300;
+}
+
+.selection .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.selection .container .option {
+    position: relative;
+    width: 228px;
+    height: 128px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    transition: all .2s ease-in-out;
+}
+
+.selection .container .option:hover {
+    background: black;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.selection .container .option h1 {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 18px;
+    text-align: center;
+    text-transform: lowercase;
+    font-style: italic;
+    font-family: 'Raleway', serif;
+    font-weight: 400;
+    transition: all .2s ease-in-out;
+}
+
+.selection .container .option:hover h1 {
+    color: white;
+}
+
+.statistics {
+    margin-top: 80px;
+    padding: 80px;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+

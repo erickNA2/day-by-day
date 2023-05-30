@@ -10,16 +10,16 @@ function listar(req, res) {
 }
 
 function cadastrar(req, res) {
-    var escolha = req.body.escolha;
-    var fkUsuario = req.body.fkUsuario
+    var voto = req.body.votoServer;
+    var idUsuario = req.body.idServer
 
-    if (escolha == undefined) {
-        res.status(400).send("Sua escolha undefined!");
-    } else if(fkUsuario == undefined) {
+    if (voto == undefined) {
+        res.status(400).send("Sua voto undefined!");
+    } else if(idUsuario == undefined) {
         res.status(400).send("Usuario não encontrado!");
     }
 
-    voteModel.cadastrar(escolha, fkUsuario).then(function(resposta){
+    voteModel.cadastrar(voto, idUsuario).then(function(resposta){
         res.status(200).send("Voto computado");
     }).catch(function(erro){
         res.status(500).json(erro.sqlMessage);

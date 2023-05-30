@@ -1,5 +1,5 @@
-CREATE DATABASE DayByDay;
-USE DayByDay;
+CREATE DATABASE daybyday;
+USE daybyday;
 
 CREATE TABLE usuario (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
@@ -14,7 +14,7 @@ CREATE TABLE usuario (
 
 CREATE TABLE votes (
     idVoto INT PRIMARY KEY AUTO_INCREMENT,
-    escolha INT,
+    voto INT,
     fkUsuario INT,
     CONSTRAINT fkVotoUsuario FOREIGN KEY (fkUsuario)
     REFERENCES usuario(idUsuario)
