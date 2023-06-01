@@ -85,8 +85,6 @@
   let mail = sessionStorage.EMAIL_USUARIO
   let dt = sessionStorage.ANO_USUARIO
 
-  let hbMenu = document.getElementById("menu");
-
   window.onload = () => {
     if(!sessionStorage.IS_LOGGED) {
       window.location = '/pages/login.html'
@@ -96,10 +94,6 @@
     ano.innerHTML = dt
     }
   
-  }
-
-  function toggle() {
-    hbMenu.classList.toggle("active");
   }
 
   function logOut() {

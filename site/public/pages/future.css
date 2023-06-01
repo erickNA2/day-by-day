@@ -57,15 +57,14 @@
 
 .selection .container .option {
     position: relative;
-    width: 228px;
-    height: 128px;
+    width: 188px;
+    height: 98px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border-radius: 20px;
     transition: all .2s ease-in-out;
 }
 
