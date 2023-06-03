@@ -1,6 +1,7 @@
 @import url('../style/nav.css');
 @import url('../style/global.css');
 @import url('../style/footer.css');
+@import url('../style/alert.css');
 
 .selection {
     position: relative;
@@ -9,7 +10,7 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
 }
 
 .selection .title {
@@ -57,8 +58,8 @@
 
 .selection .container .option {
     position: relative;
-    width: 188px;
-    height: 98px;
+    width: 128px;
+    height: 68px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.4);
     display: flex;

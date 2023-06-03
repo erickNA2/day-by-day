@@ -7,7 +7,10 @@ CREATE TABLE usuarios (
     estado CHAR(2),
     email VARCHAR(80),
     senha VARCHAR(20),
-    vidAssistidos INT
+    vidAssistidos INT,
+    testeIng INT,
+    testeFra INT,
+    testeJpn INT
 );
 
 CREATE TABLE videos (
@@ -27,10 +30,10 @@ CREATE TABLE votos (
     REFERENCES usuarios(idUsuario)
 );
 
-INSERT INTO usuario VALUES 
-    (null, 'Erick Nunes', 'SP', 'erick@hotmail.com', '123', 0),
-    (null, 'Admin', 'SP', 'admin@hotmail.com', '123', 0),
-    (null, 'Alice Faria', 'RJ', 'lice@hotmail.com', '123', 0),
-    (null, 'Fabio Fagundes', 'MS', 'fabio@hotmail.com', '123', 0);
+INSERT INTO usuarios VALUES 
+    (null, 'Erick Nunes', 'SP', 'erick@hotmail.com', '123', 0, 0, 0, 0),
+    (null, 'Admin', 'SP', 'admin@hotmail.com', '123', 0, 0, 0, 0),
+    (null, 'Alice Faria', 'RJ', 'lice@hotmail.com', '123', 0, 0, 0, 0),
+    (null, 'Fabio Fagundes', 'MS', 'fabio@hotmail.com', '123', 0, 0, 0, 0);
 
 SELECT * FROM usuarios;

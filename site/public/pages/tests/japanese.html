@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day By Day - Teste Inglês</title>
+    <link rel="stylesheet" href="./test.css">
+</head>
+<body>
+    <div class="alerta" id="notification">
+        <div class="icon">
+            <div class="circle">
+                !
+            </div>
+        </div>
+        <div class="text">
+            <p  id="content"></p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="mainMenu" id="menu">
+            <div class="container borderBot">
+                <div class="link">
+                    <a href="../../index.html">Inicio</a>
+                </div>
+                <div class="link">
+                    <a href="../perfil.html">Perfil</a>
+                </div>
+                <div class="link">
+                    <a href="../cursos.html">Cursos</a>
+                </div>
+                <div class="link">
+                    <a href="../future.html">Futuro</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav borderBot">
+            <div class="logo">
+                <a href="../../index.html">Day by Day</a>
+            </div>
+            <div class="menu" onclick="toggle()">
+                <div class="icon"></div>
+                <p>menu</p>
+            </div>
+            <div class="register">
+                <ul>
+                    <li class="borderRight"><a href="./login.html">login</a></li>
+                    <li><a href="./register.html">register</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="instructions">
+            <h1>Teste seu nivel de Japonês</h1>
+            <ul>
+                <li><p>Leia com atenção o enunciado das questões</p></li>
+                <li><p>Entre as quatro opções escolha a alternativa correta</p></li>
+                <li><p>Após responder todas as questões clique em enviar para ver o resultado</p></li>
+            </ul>
+        </div>
+
+        <div class="questions">
+
+            <div class="box">
+                <div class="question">
+                    <h1>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati deserunt nam facere commodi itaque!</h1>
+                </div>
+                <form action="">
+                    <div class="item">
+                        <input type="radio" id="" name="fav_language" value="a">
+                        <label for="1a">a. Lorem, ipsum.</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" id="" name="fav_language" value="b">
+                        <label for="1b">b. Lorem, ipsum.</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="radio" id="" name="fav_language" value="c">
+                        <label for="1c">c. Lorem, ipsum.</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="radio" id="firstResponse" name="fav_language" value="d">
+                        <label for="1d">d. Lorem, ipsum.</label>
+                    </div>
+                    
+                    
+                </form>
+            </div> 
+
+            <div class="box">
+                <div class="question">
+                    <h1>2. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, impedit quasi?</h1>
+                </div>
+                <form action="">
+                    <div class="item">
+                        <input type="radio" id="" name="fav_language" value="a">
+                        <label>a. Lorem, ipsum.</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" id="secondResponse" name="fav_language" value="b">
+                        <label>b. Lorem, ipsum.</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="radio" id="" name="fav_language" value="c">
+                        <label>c. Lorem, ipsum.</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="radio" id="" name="fav_language" value="d">
+                        <label >d. Lorem, ipsum.</label>
+                    </div>
+                </form>
+            </div> 
+
+            <div class="box">
+                <div class="question">
+                    <h1>3. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, libero.</h1>
+                </div>
+                <form action="">
+                    <div class="item">
+                        <input type="radio" id="thirdResponse" name="fav_language" value="a">
+                        <label for="">a. Lorem, ipsum.</label>
+                    </div>
+                    <div class="item">
+                        <input type="radio" id="" name="fav_language" value="b">
+                        <label for="">b. Lorem, ipsum.</label>
+                    </div>
+
+                    <div class="item">
+                        <input type="radio" id="" name="fav_language" value="c">
+                        <label for="">c. Lorem, ipsum.</label>
+                    </div>
+
+                    <div class="item" onclick="calcularNota()">
+                        <input type="radio" id="" name="fav_language" value="d">
+                        <label for="">d. Lorem, ipsum.</label>
+                    </div>
+                </form>
+            </div> 
+
+        </div>
+
+        <div class="submit">
+            <div class="btn" onclick="cadastrar()">enviar respostas</div>
+        </div>
+
+        <div class="footer">
+            <div class="container borderTop">
+                <div class="box borderRight">
+                    <div class="text">
+                        <p>Ficou com alguma duvida?</p>
+                        <p>Algum ponto a adicionar?</p>
+                        <p>Algum agradecimento?</p>
+                        <p>ou apenas um olá?</p>
+                        <p style="margin-top: 10px">
+                            Envie sua mensagem e podemos conversar!
+                        </p>
+                    </div>
+                    <div class="square1"></div>
+                    <div class="ball1"></div>
+                </div>
+
+                <div class="send">
+                    <form action="">
+                        <div class="field">
+                            <label for="">Nome:</label>
+                            <input type="text" id="ipt_ident" />
+                        </div>
+
+                        <div class="field">
+                            <label for="">Mensagem:</label>
+                            <textarea name="comment" id="ipt_msg"></textarea>
+                        </div>
+
+                        <div class="field">
+                            <div class="btn">Enviar</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="navigation borderTop">
+                <div class="box borderRight">
+                    <a href="../../index.html">
+                        <p>inicio</p>
+                    </a>
+                </div>
+                <div class="box borderRight">
+                    <a href="../cursos.html">
+                        <p>cursos</p>
+                    </a>
+                </div>
+                <div class="box borderRight">
+                    <a href="../perfil.html">
+                        <p>perfil</p>
+                    </a>
+                </div>
+                <div class="box">
+                    <a href="../future.html">
+                        <p>futuro</p>
+                    </a>
+                </div>
+            </div>
+            <div class="copyRight borderTop">
+                <p>©2023. Erick Nunes</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="../../js/funcoes.js"></script>
+
+<script>
+    let nota = 0
+
+    function calcularNota() {
+        
+
+        let fr = document.getElementById('firstResponse')
+        let sr = document.getElementById('secondResponse')
+        let tr = document.getElementById('thirdResponse')
+
+        if(fr.checked) {
+            nota++
+        }
+
+        if(sr.checked) {
+            nota++
+        }
+
+        if(tr.checked) {
+            nota++
+        }
+
+    }
+
+    function cadastrar() {
+		//Recupere o valor da nova input pelo nome do id
+		// Agora vá para o método fetch logo abaixo
+		var notaVar = nota;
+		var idVar = sessionStorage.ID_USUARIO;
+        var idiomaVar = 'testeIng'
+
+		if (
+			notaVar == "" ||
+			idVar == "" ||
+            idiomaVar == ""
+		) {
+			notify('Falha ao submeter nota')
+			return false;
+		}
+
+		// Enviando o valor da nova input
+		fetch("/usuarios/nota", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				// crie um atributo que recebe o valor recuperado aqui
+				// Agora vá para o arquivo routes/usuario.js
+				notaServer: notaVar,
+				idServer: idVar,
+                idiomaServer: idiomaVar
+			}),
+		})
+			.then(function (resposta) {
+				console.log("resposta: ", resposta);
+
+				if (resposta.ok) {
+					notify('Enviado com sucesso!')
+				} else {
+					throw "Houve um erro ao tentar realizar o cadastro!";
+				}
+			})
+			.catch(function (resposta) {
+				console.log(`#ERRO: ${resposta}`);
+			});
+
+		return false;
+	}
+</script>

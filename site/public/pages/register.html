@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Day By Day - Register</title>
 		<link rel="stylesheet" href="register.css" />
-		<script src="../js/funcoes.js"></script>
 	</head>
 	<body>
 		<div class="alerta" id="notification">
@@ -68,34 +67,6 @@
 						<div class="row borderBot">
 							<div class="label"><p>Senha:</p></div>
 							<input type="password" id="ipt_senha" class="inputText" />
-						</div>
-
-						<div class="row">
-							<div class="label"><p>Experiencia com idiomas:</p></div>
-							<select id="ipt_idioma">
-								<option value="">Selecione</option>
-								<option value="none">Nenhuma</option>
-								<option value="low">Baixa</option>
-								<option value="mid">Intermediaria</option>
-								<option value="high">Alta</option>
-							</select>
-						</div>
-					</div>
-
-					<div class="box">
-						<div class="row borderBot">
-							<div class="label"><p>Sobrenome:</p></div>
-							<input type="text" id="ipt_sobre" class="inputText" />
-						</div>
-
-						<div class="row borderBot">
-							<div class="label"><p>Ano de Nacimento:</p></div>
-							<input
-								type="text"
-								id="ipt_ano"
-								class="inputText"
-								placeholder="Quatro digitos!!!"
-							/>
 						</div>
 
 						<div class="row borderBot">
@@ -217,11 +188,8 @@
 		//Recupere o valor da nova input pelo nome do id
 		// Agora vá para o método fetch logo abaixo
 		var nomeVar = ipt_nome.value;
-		var sobreVar = ipt_sobre.value;
 		var emailVar = ipt_email.value;
-		var anoVar = Number(ipt_ano.value);
 		var estadoVar = ipt_estado.value;
-		var idiomaVar = ipt_idioma.value;
 		var senhaVar = ipt_senha.value;
 		var confirmacaoSenhaVar = ipt_cnfSenha.value;
 
@@ -245,10 +213,7 @@
 				// crie um atributo que recebe o valor recuperado aqui
 				// Agora vá para o arquivo routes/usuario.js
 				nomeServer: nomeVar,
-				sobreServer: sobreVar,
 				estadoServer: estadoVar,
-				idiomaServer: idiomaVar,
-				anoServer: anoVar,
 				emailServer: emailVar,
 				senhaServer: senhaVar,
 			}),

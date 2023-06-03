@@ -1,116 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Day By Day - Perfil</title>
-    <link rel="stylesheet" href="./perfil.css" />
-  </head>
-  <body>
-    <div class="mainMenu" id="menu">
-      <div class="container borderBot">
-        <div class="link">
-          <a href="../index.html">Inicio</a>
-        </div>
-        <div class="link">
-          <a href="./perfil.html">Perfil</a>
-        </div>
-        <div class="link">
-          <a href="./cursos.html">Cursos</a>
-        </div>
-        <div class="link">
-          <a href="./future.html">Futuro</a>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day By Day - Perfil</title>
+  <link rel="stylesheet" href="./perfil.css" />
+</head>
+
+<body>
+  <div class="mainMenu" id="menu">
+    <div class="container borderBot">
+      <div class="link">
+        <a href="../index.html">Inicio</a>
+      </div>
+      <div class="link">
+        <a href="./perfil.html">Perfil</a>
+      </div>
+      <div class="link">
+        <a href="./cursos.html">Cursos</a>
+      </div>
+      <div class="link">
+        <a href="./future.html">Futuro</a>
       </div>
     </div>
-    <div class="nav borderBot">
-      <div class="logo"><a href="../index.html">Day by Day</a></div>
-      <div class="menu" onclick="toggle()">
-        <div class="icon"></div>
-        <p>menu</p>
-      </div>
-      <div class="register">
-        <ul>
-          <li class="borderRight"><a href="./login.html">login</a></li>
-          <li><a href="./register.html">register</a></li>
-        </ul>
-      </div>
+  </div>
+  <div class="nav borderBot">
+    <div class="logo"><a href="../index.html">Day by Day</a></div>
+    <div class="menu" onclick="toggle()">
+      <div class="icon"></div>
+      <p>menu</p>
     </div>
+    <div class="register">
+      <ul>
+        <li class="borderRight"><a href="./login.html">login</a></li>
+        <li><a href="./register.html">register</a></li>
+      </ul>
+    </div>
+  </div>
 
-    <div class="profile">
-        <div class="container">
-            <div class="userInfo borderRight">
-              <div class="pic">
+  <div class="profile">
+    <div class="container">
+      <div class="userInfo borderRight">
+        <div class="pic">
 
-              </div>
-              <div class="text" id="nome" style="text-transform: capitalize;">
-                Lorem, ipsum.
-              </div>
-              <div class="text" id="email">
-                Lorem, ipsum.
-              </div>
-              <div class="text" id="ano">
-                Lorem, ipsum.
-              </div>
-              <div class="text">
-                Lorem, ipsum.
-              </div>
-              <div class="text" onclick="logOut()">
-                Log-out
-              </div>
-            </div>
-
-            <div class="progressInfo">
-                <div class="testContainer">
-                  <div class="box">
-                    <div class="chart">
-
-                    </div>
-                    <div class="test">
-                      <div class="btn">teste Inglês</div>
-                    </div>
-                  </div>
-
-                  <div class="box">
-                    <div class="chart">
-
-                    </div>
-                    <div class="test">
-                      <div class="btn">teste francês</div>
-                    </div>
-                  </div>
-
-                  <div class="box">
-                    <div class="chart">
-
-                    </div>
-                    <div class="test">
-                      <div class="btn">teste japonês</div>
-                    </div>
-                  </div>
-                </div>
-            </div>
         </div>
+        <div class="text" id="nome" style="text-transform: capitalize;">
+          Olá, 
+        </div>
+        <div class="text" id="email">
+          Lorem, ipsum.
+        </div>
+        <div class="text">
+          Lorem, ipsum.
+        </div>
+        <div class="text" onclick="logOut()">
+          Log-out
+        </div>
+      </div>
+
+      <div class="progressInfo">
+        <div class="testContainer">
+          <div class="box">
+            <div class="chart"></div>
+            <div class="btn"><a href="./tests/english.html">teste inglês</a></div>
+          </div>
+
+          <div class="box">
+            <div class="chart"></div>
+            <div class="btn"> <a href="./tests/french.html">teste francês</a> </div>
+          </div>
+
+          <div class="box">
+            <div class="chart"></div>
+            <div class="btn"> <a href="./tests/japanese.html">teste japonês</a> </div>
+          </div>
+        </div>
+
+        <div class="voidContainer"></div>
+      </div>
+      
     </div>
-  </body>
+  </div>
+  </div>
+</body>
+
 </html>
 
 <script src="../js/funcoes.js"></script>
 
 <script>
   let nm = sessionStorage.NOME_USUARIO
-  let mail = sessionStorage.EMAIL_USUARIO
 
   window.onload = () => {
-    if(sessionStorage.IS_LOGGED == 0) {
+    if (sessionStorage.IS_LOGGED == 0) {
       window.location = '/pages/login.html'
       sessionStorage.REQUEST_LOGIN = 1
     } else {
-      nome.innerHTML = nm
-      email.innerHTML = mail
+      nome.innerHTML += nm
     }
-  
+
   }
 
   function logOut() {
@@ -123,6 +113,6 @@
     setTimeout(() => {
       window.location = '/pages/login.html'
     }, 2000)
-    
+
   }
 </script>

@@ -79,7 +79,7 @@ function cadastrar(req, res) {
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, sbrNome, ano, estado, email, senha, idiomaExp)
+        usuarioModel.cadastrar(nome, estado, email, senha)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -97,9 +97,32 @@ function cadastrar(req, res) {
     }
 }
 
+function nota(req, res) {
+    var nota = req.body.notaServer;
+    var idioma = req.body.idiomaServer;
+    var idUsuario = req.body.idServer;
+
+    usuarioModel.nota(nota, idioma, idUsuario)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    nota,
     testar
 }

@@ -62,6 +62,7 @@ function votar(num) {
 	})
 		.then(function resposta(response) {
 			console.log("resposta: ", resposta);
+			notify('Voto computado!')
 		})
 		.catch(function (resposta) {
 			console.log(`#ERRO: ${resposta}`);
