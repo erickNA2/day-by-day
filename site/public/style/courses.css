@@ -1,7 +1,7 @@
 .courses {
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,21 +39,19 @@
 .courses .container .box {
     position: relative;
     width: 28%;
-    height: 98%;
+    height: 222px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border-radius: 20px;
     transition: all .2s ease-in-out;
 }
 
 .courses .container .box:hover {
     background: black;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-    cursor: pointer;
 }
 
 .courses .container .box:hover h1 {
@@ -82,4 +80,32 @@
     text-align: left;
     font-weight: 300;
     font-family: 'Raleway', sans-serif;
+}
+
+.courses .container .box .qntVideos {
+    position: relative;
+    width: 88px;
+    height: 88px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1px;
+
+}
+
+.courses .container .box .qntVideos:hover {
+    cursor: pointer;
+}
+
+.courses .container .box .qntVideos .on {
+    background: #e89f13;
+    transition: all .2s ease-in-out;
+}
+
+.courses .container .box .qntVideos .on:hover{
+    opacity: .8;
+}
+
+.courses .container .box .qntVideos span {
+    background: #c5620c;
 }

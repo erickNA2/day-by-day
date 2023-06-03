@@ -1,0 +1,63 @@
+.alerta {
+    position: fixed;
+    right: -300px;
+    top: 128px;
+    width: 288px;
+    height: 88px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    opacity: 0;
+    transition: all .4s ease-in;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    z-index: 99;
+}
+
+.pop {
+    right: 0;
+    opacity: 1;
+}
+
+.alerta .icon {
+    position: relative;
+    width: 48px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.alerta .icon .circle {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    color: rgba(0, 0, 0, 0.8 );
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.alerta .text {
+    position: relative;
+    height: 100%;
+    width: 228px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.alerta .text p {
+    color: black;
+    font-size: 14px;
+    text-align: left;
+    font-weight: 300;
+    text-transform: lowercase;
+}

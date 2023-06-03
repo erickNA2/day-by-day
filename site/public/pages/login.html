@@ -8,6 +8,16 @@
 		<link rel="stylesheet" href="./login.css" />
 	</head>
 	<body>
+		<div class="alerta" id="notification">
+			<div class="icon">
+				<div class="circle">
+					!
+				</div>
+			</div>
+			<div class="text">
+				<p  id="content"></p>
+			</div>
+		</div>
 		<div class="main">
 			<div class="mainMenu" id="menu">
 				<div class="gridContainer borderBot">
@@ -143,6 +153,7 @@
 		var senhaVar = senha_input.value;
 
 		if (emailVar == "" || senhaVar == "") {
+			notify('Email ou senha invalidos...')
 			return false;
 		}
 
@@ -166,6 +177,7 @@
 					console.log(resposta);
 
 					resposta.json().then((json) => {
+						notify('Login realizado com sucesso!')
 						console.log(json);
 						console.log(JSON.stringify(json));
 
@@ -178,7 +190,7 @@
 
 						setTimeout(() => {
 							window.location = "/pages/perfil.html";
-						}, "200"); // apenas para exibir o loading
+						}, "2000"); // apenas para exibir o loading
 					});
 				} else {
 					console.log("Houve um erro ao tentar realizar o login!");

@@ -1,6 +1,7 @@
 @import url('../style/global.css');
 @import url('../style/nav.css');
 @import url('../style/footer.css');
+@import url('../style/alert.css');
 
 .register {
     position: relative;

@@ -92,20 +92,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px rgba(0, 0, 0, 0.2) solid;
 }
 
 .hero .container .box .void .ill1 {
     position: relative;
-    width: 122px;
-    height: 122px;
-    background: black;
+    width: 88px;
+    height: 88px;
+    background: #c5620c;
+    rotate: 134deg;
 }
 
 .hero .container .box .void .ill2 {
     position: relative;
-    width: 122px;
-    height: 122px;
+    width: 98px;
+    height: 98px;
     border-radius: 50%;
-    background: black;
+    background: #4b4816;
 }

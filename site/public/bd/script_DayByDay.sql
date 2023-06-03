@@ -20,6 +20,7 @@ CREATE TABLE votes (
     REFERENCES usuario(idUsuario)
 );
 
-DROP TABLE usuario;
+INSERT INTO usuario VALUES 
+    (null, 'erick', 'nunes', '2001', 'SP', 'erick@hotmail.com', '123', 'alto');
 
 SELECT * FROM usuario;

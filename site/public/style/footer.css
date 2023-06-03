@@ -32,13 +32,14 @@
   position: absolute;
   bottom: 20px;
   left: 20px;
-  width: 88px;
-  height: 88px;
-  background: rgba(0, 0, 0, 0.9);
+  width: 68px;
+  height: 68px;
+  background: #c5620c;
   backdrop-filter: blur(18px);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
+  rotate: 134deg;
 }
 
 .footer .container .box .square1:hover {
@@ -49,10 +50,10 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 98px;
-  height: 98px;
+  width: 82px;
+  height: 82px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.9);
+  background: #4b4816;
   backdrop-filter: blur(18px);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(0, 0, 0, 0.2);

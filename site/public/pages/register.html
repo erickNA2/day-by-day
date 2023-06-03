@@ -9,6 +9,16 @@
 		<script src="../js/funcoes.js"></script>
 	</head>
 	<body>
+		<div class="alerta" id="notification">
+			<div class="icon">
+				<div class="circle">
+					!
+				</div>
+			</div>
+			<div class="text">
+				<p  id="content"></p>
+			</div>
+		</div>
 		<div class="main">
 			<div class="mainMenu" id="menu">
 				<div class="gridContainer borderBot">
@@ -229,6 +239,7 @@
 			senhaVar == "" ||
 			confirmacaoSenhaVar == ""
 		) {
+			notify('Falha ao registrar, certifique-se de preencher os campos devidamente.')
 			return false;
 		}
 
@@ -254,6 +265,7 @@
 				console.log("resposta: ", resposta);
 
 				if (resposta.ok) {
+					notify('Cadastrado com sucesso!')
 					setTimeout(() => {
 						window.location = "/pages/login.html";
 					}, "2000");

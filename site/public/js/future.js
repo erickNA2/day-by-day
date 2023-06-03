@@ -1,5 +1,6 @@
 window.onload = () => {
 	buscarVotos();
+	console.log(grafico.options)
 };
 
 var almVotos = 0;
@@ -17,12 +18,17 @@ let grafico = new Chart(ctx, {
 			{
 				label: "Acompanhamento dos votos:",
 				data: [almVotos, rssVotos, manVotos, hndVotos],
+				backgroundColor: ['rgba(0, 0, 0, .8)',
+								'rgba(0, 0, 0, .8)',
+								'rgba(0, 0, 0, .8)',
+								'rgba(0, 0, 0, .8)'],
 				borderWidth: 1,
 			},
 		],
 	},
 	options: {
 		scales: {
+			responsive: true,
 			y: {
 				beginAtZero: true,
 			},
