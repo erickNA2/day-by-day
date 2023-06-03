@@ -9,26 +9,18 @@
   </head>
   <body>
     <div class="mainMenu" id="menu">
-      <div class="gridContainer borderBot">
-        <div class="box borderBot borderRight">
-          <a href="../index.html">
-            <h1>inicio</h1>
-          </a>
+      <div class="container borderBot">
+        <div class="link">
+          <a href="../index.html">Inicio</a>
         </div>
-        <div class="box borderBot borderRight">
-          <a href="./cursos.html">
-            <h1>cursos</h1>
-          </a>
+        <div class="link">
+          <a href="./perfil.html">Perfil</a>
         </div>
-        <div class="box borderRight">
-          <a href="./future.html">
-            <h1>futuro</h1>
-          </a>
+        <div class="link">
+          <a href="./cursos.html">Cursos</a>
         </div>
-        <div class="box borderRight">
-          <a href="./perfil.html">
-            <h1>perfil</h1>
-          </a>
+        <div class="link">
+          <a href="./future.html">Futuro</a>
         </div>
       </div>
     </div>
@@ -70,7 +62,34 @@
             </div>
 
             <div class="progressInfo">
-                
+                <div class="testContainer">
+                  <div class="box">
+                    <div class="chart">
+
+                    </div>
+                    <div class="test">
+                      <div class="btn">teste Inglês</div>
+                    </div>
+                  </div>
+
+                  <div class="box">
+                    <div class="chart">
+
+                    </div>
+                    <div class="test">
+                      <div class="btn">teste francês</div>
+                    </div>
+                  </div>
+
+                  <div class="box">
+                    <div class="chart">
+
+                    </div>
+                    <div class="test">
+                      <div class="btn">teste japonês</div>
+                    </div>
+                  </div>
+                </div>
             </div>
         </div>
     </div>
@@ -81,30 +100,29 @@
 
 <script>
   let nm = sessionStorage.NOME_USUARIO
-  let sbrNm = sessionStorage.SBRNOME_USUARIO
   let mail = sessionStorage.EMAIL_USUARIO
-  let dt = sessionStorage.ANO_USUARIO
 
   window.onload = () => {
-    if(!sessionStorage.IS_LOGGED) {
+    if(sessionStorage.IS_LOGGED == 0) {
       window.location = '/pages/login.html'
+      sessionStorage.REQUEST_LOGIN = 1
     } else {
-      nome.innerHTML = nm + ' ' + sbrNm
-    email.innerHTML = mail
-    ano.innerHTML = dt
+      nome.innerHTML = nm
+      email.innerHTML = mail
     }
   
   }
 
   function logOut() {
-    sessionStorage.ANO_USUARIO = ''
     sessionStorage.EMAIL_USUARIO = ''
-    sessionStorage.ID_USUARIO = ''
+    sessionStorage.ID_USUARIO = 0
     sessionStorage.NOME_USUARIO = ''
-    sessionStorage.SBRNOME_USUARIO = ''
-    sessionStorage.IS_LOGGED = false
+    sessionStorage.IS_LOGGED = 0
 
-    alert('deslogado...')
-    window.location = '/pages/login.html'
+    notify('Deslogando...')
+    setTimeout(() => {
+      window.location = '/pages/login.html'
+    }, 2000)
+    
   }
 </script>

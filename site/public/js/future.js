@@ -1,6 +1,12 @@
 window.onload = () => {
-	buscarVotos();
-	console.log(grafico.options)
+	if(sessionStorage.IS_LOGGED == 0) {
+		window.location = '/pages/login.html'
+		sessionStorage.REQUEST_LOGIN = 1
+	  } else {
+		buscarVotos();
+		console.log(grafico.options)
+	  }
+	
 };
 
 var almVotos = 0;

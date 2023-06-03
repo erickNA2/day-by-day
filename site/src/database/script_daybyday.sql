@@ -33,4 +33,4 @@ INSERT INTO usuario VALUES
     (null, 'Alice Faria', 'RJ', 'lice@hotmail.com', '123', 0),
     (null, 'Fabio Fagundes', 'MS', 'fabio@hotmail.com', '123', 0);
 
-SELECT * FROM usuarios;
+SELECT * FROM usuario;

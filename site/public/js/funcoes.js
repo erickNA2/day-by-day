@@ -12,7 +12,7 @@ function notify(text) {
     ntf.classList.toggle('pop')
     setTimeout(() => {
         ntf.classList.toggle('pop')
-    }, 2000)
+    }, 2400)
 
 
 }
