@@ -76,8 +76,7 @@
     padding: 12px;
 }
 
-.profile .container .progressInfo .testContainer .box .chart {
-    background: magenta;
+.profile .container .progressInfo .testContainer .box .chartPerfil {
     width: 100%;
     height: 80%;
 }

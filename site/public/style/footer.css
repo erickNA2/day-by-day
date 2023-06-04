@@ -15,12 +15,12 @@
   height: 80%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .footer .container .box {
   position: relative;
-  width: 50%;
+  width: 100%;
   height: 100%;
   padding: 80px;
   display: flex;
@@ -82,94 +82,8 @@
   font-family: "Raleway", sans-serif;
 }
 
-.footer .container .send {
-  position: relative;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 80px;
-}
-
-.footer .container .send form {
-  position: relative;
-  width: auto;
-  height: 322px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-evenly;
-}
-
-.footer .container .send form .field {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.footer .container .send form label {
-  margin-bottom: 4px;
-  color: rgba(0, 0, 0, 0.9);
-  font-size: 12px;
-  text-align: left;
-  text-transform: capitalize;
-  font-weight: 300;
-  font-family: "Raleway", sans-serif;
-}
-
-.footer .container .send form input {
-  width: 198px;
-  height: 26px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-  padding: 6px;
-  color: rgba(0, 0, 0, 0.9);
-  font-size: 12px;
-  font-weight: 300;
-  font-family: "Raleway", sans-serif;
-}
-
-.footer .container .send form textarea {
-  height: 88px;
-  width: 198px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-  padding: 6px;
-  color: rgba(0, 0, 0, 0.9);
-  font-size: 12px;
-  font-weight: 300;
-  font-family: "Raleway", sans-serif;
-}
-
-.footer .container .send form textarea:hover {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.footer .container .send form .btn {
-  position: relative;
-  background: none;
-  border: none;
-  box-shadow: none;
-  width: auto;
-  height: auto;
-  color: black;
-  font-size: 14px;
-  text-align: left;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-family: "Raleway", sans-serif;
-  transition: all 0.2s ease-in-out;
-}
-
-.footer .container .send form .btn:hover {
-  cursor: pointer;
-}
-
-.footer .container .send form .btn:hover::after {
-  width: 100%;
+.footer .container .box .text a p {
+  text-decoration: underline;
 }
 
 .hero .container .text .btn::after {
