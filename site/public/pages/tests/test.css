@@ -55,6 +55,22 @@
     justify-content: space-evenly;
 }
 
+.questions .enunciado {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.questions .enunciado h1 {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 32px;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-weight: 300;
+}
+
 .questions .box {
     position: relative;
     width: 100%;

@@ -31,7 +31,15 @@
     width: 98px;
     height: 98px;
     border-radius: 50%;
-    background: crimson;
+    background: white;
+    border: 1px solid black;
+}
+
+.profile .container .userInfo .pic img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 .profile .container .userInfo .text {
@@ -44,7 +52,7 @@
     color: rgba(0, 0, 0, 0.9);
     text-transform: lowercase;
     font-size: 12px;
-    text-align: left;
+    text-align: center;
     font-weight: 400;
     font-family: 'Raleway', sans-serif;
 }

@@ -153,7 +153,7 @@
           <h1>Em quais idiomas lecionamos?</h1>
         </div>
         <div class="container">
-          <div class="box">
+          <div class="box" onclick="redirectCursos()">
             <h1>Inglês</h1>
             <div class="qntVideos">
               <span class="on"><a href="./pages/cursos.html"></a> </span>
@@ -162,16 +162,16 @@
               <span></span>
             </div>
           </div>
-          <div class="box">
+          <div class="box" onclick="redirectCursos()">
             <h1>Francês</h1>
-            <div class="qntVideos">
+            <div class="qntVideos" >
               <span class="on"><a href="./pages/cursos.html"></a></span>
               <span class="on"><a href="./pages/cursos.html"></a></span>
               <span class="on"><a href="./pages/cursos.html"></a></span>
               <span></span>
             </div>
           </div>
-          <div class="box">
+          <div class="box" onclick="redirectCursos()">
             <h1>Japonês</h1>
             <div class="qntVideos">
               <span class="on"><a href="./pages/cursos.html"></a></span>
@@ -236,6 +236,10 @@
 <script src="./js/funcoes.js"></script>
 
 <script>
+  function redirectCursos() {
+    window.location = '/pages/cursos.html'
+  }
+  
   function setStorageVariables() {
     sessionStorage.EMAIL_USUARIO = '';
     sessionStorage.NOME_USUARIO = '';
