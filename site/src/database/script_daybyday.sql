@@ -7,15 +7,9 @@ CREATE TABLE usuarios (
     estado CHAR(2),
     email VARCHAR(80),
     senha VARCHAR(20),
-    vidAssistidos INT
-);
-
-CREATE TABLE videos (
-	idVideos INT PRIMARY KEY AUTO_INCREMENT,
-    url VARCHAR(255),
-    titulo VARCHAR(60),
-    descricao VARCHAR(255),
-    duracao CHAR(5)
+    testeIng INT,
+    testeFra INT,
+    testeJpn INT
 );
 
 CREATE TABLE votos (
@@ -28,9 +22,18 @@ CREATE TABLE votos (
 );
 
 INSERT INTO usuario VALUES 
-    (null, 'Erick Nunes', 'SP', 'erick@hotmail.com', '123', 0),
-    (null, 'Admin', 'SP', 'admin@hotmail.com', '123', 0),
-    (null, 'Alice Faria', 'RJ', 'lice@hotmail.com', '123', 0),
-    (null, 'Fabio Fagundes', 'MS', 'fabio@hotmail.com', '123', 0);
+    (null, 'Erick Nunes', 'SP', 'erick@hotmail.com', '123', 0, 0, 0, 0),
+    (null, 'Admin', 'SP', 'admin@hotmail.com', '123', 0, 0, 0, 0),
+    (null, 'Alice Faria', 'RJ', 'lice@hotmail.com', '123', 0, 0, 0, 0),
+    (null, 'Fabio Fagundes', 'MS', 'fabio@hotmail.com', '123', 0, 0, 0, 0);
+
+INSERT INTO votos VALUES 
+    (null, 1, 1),
+    (null, 2, 1),
+    (null, 3, 1),
+    (null, 4, 1),
+    (null, 2, 1),
+    (null, 3, 1),
+    (null, 1, 1);
 
 SELECT * FROM usuario;
